@@ -13,6 +13,8 @@ Other alternatives are either:
 Caffeinated is very extendable, meaning that a new caf expression can be added without too much work.<br>
 **What is the main downside of Caffeinated over these other projects?** It's not finished yet, but perhaps eventually it will be.
 
+*Disclaimer: I do actually like most of these projects (except for APs, they suck), I just wanted to point out a few reasons why I prefer this project over them.*
+
 ## Caffeinated Syntax
 
 ### Caf expressions
