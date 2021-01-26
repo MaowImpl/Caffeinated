@@ -2,6 +2,17 @@
 Java 8 source preprocessor, adds new "caf expressions" to Java to help reduce boilerplate.<br>
 **Caffeinated** is a full version of the **Caffeine** prototype, which can be found [here](https://github.com/MaowImpl/Caffeine).
 
+## Why should I use Caffeinated?
+Caffeinated is a very quick solution to a very annoying problem (too much boilerplate) in Java.
+Other alternatives are either:
+
+* Underpowered (Annotation Processors)
+* Unstable (Lombok)
+* Too different (Kotlin/Groovy/etc.)
+
+Caffeinated is very extendable, meaning that a new caf expression can be added without too much work.<br>
+**What is the main downside of Caffeinated over these other projects?** It's not finished yet, but perhaps eventually it will be.
+
 ## Caffeinated Syntax
 
 ### Caf expressions
@@ -13,6 +24,7 @@ They start with `#`, and come before the class modifiers, standard convention is
 
 `data` is the most simple of all expressions, it generates new setters, getters, and constructor parameters based on the fields in a class that has it, it also retains the value that it has been assigned in the field.<br>
 The rules for `data` are simple:
+
 * **Always**: Generate a **getter**.
 * If a field is **mutable**: Generate a **setter**.
 * If a field is **immutable**: Generate a **constructor parameter** IF there is no value assigned to the field.
