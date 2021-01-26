@@ -1,0 +1,6 @@
+#data
+public class Test {
+    private final String meme;
+    private final String meme1 = "oofers";
+    private String school;
+}

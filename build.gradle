@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'antlr'
+    id 'idea'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+group = 'maow'
+archivesBaseName = 'caffeinated'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    // Antlr
+    antlr 'org.antlr:antlr4:4.9.1'
+    // JavaPoet
+    implementation 'com.squareup:javapoet:1.13.0'
+    implementation 'com.github.maowimpl:javapoethacks:1.0.0'
+    // JOpt
+    implementation 'net.sf.jopt-simple:jopt-simple:6.0-alpha-3'
+}
+
+generateGrammarSource {
+    arguments += ['-visitor',
+                  '-long-messages',
+                  '-package', 'maow.caffeinated.internal.parser']
+}
